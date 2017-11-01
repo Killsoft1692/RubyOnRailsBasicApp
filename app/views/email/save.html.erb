@@ -1,0 +1,15 @@
+<h1>Save Your Email Here</h1>
+
+<div class="col-form-legend">
+  <%= form_tag do %>
+      <%= label_tag(:emails, "Add email:") %>
+      <%= text_field_tag(:emails) %>
+      <%= submit_tag("Save") %>
+  <% end %>
+
+</div>
+<span class="active">
+   <% if flash[:error] -%>
+      <p class="field_with_errors"><%= flash[:error] %></p>
+  <% end -%>
+</span>
