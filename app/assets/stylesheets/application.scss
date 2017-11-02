@@ -13,3 +13,9 @@
  */
 @import "bootstrap";
 
+.field_with_errors {
+  input {
+    border-color: red;
+  }
+}
+

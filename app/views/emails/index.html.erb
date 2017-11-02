@@ -1,0 +1,27 @@
+<%= link_to 'Home', root_url %>
+
+<h1>Save Your Email Here</h1>
+
+<%= flash.notice %>
+
+<div class="col-form-legend">
+
+  <h1>Better</h1>
+
+  <%= form_for @email do |f| %>
+    <%= f.label :address, 'Your email' %>
+    <%= f.text_field :address %>
+    <%= error_messages(@email, :address) %>
+    <br />
+    <%= f.submit 'Submit' %>
+  <% end %>
+
+</div>
+
+<div>
+  <ul>
+    <% @emails.each_with_index do |email, index| %>
+      <li><%= index + 1 %> – <%= email.address %></li>
+    <% end %>
+  </ul>
+</div>
